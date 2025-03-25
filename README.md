@@ -1,6 +1,11 @@
 # Recipe App - Backend
 Taking the recipe_app_next repo and copying over the functionality into a split go api backend and a separate react frontend.
 
+## Getting started
+- download this repo
+- ensure go 1.24 installed
+- from root dir, `go run main.go`
+
 ## Current Status
 
 ```bash
@@ -23,4 +28,27 @@ Taking the recipe_app_next repo and copying over the functionality into a split 
 < 
 {"success":true,"data":"hi"}
 * Connection #0 to host localhost left intact
+```
+
+## Eventual Directory Organization
+(as suggested by chatgpt)
+
+```
+/yourproject
+│── /cmd              # Entry points (e.g., different binaries)
+│── /config           # Configuration files (optional)
+│── /internal         # Internal application logic (not meant to be used outside this project)
+│   │── /handlers     # HTTP handlers (route logic)
+│   │── /models       # Database models
+│   │── /services     # Business logic
+│   │── /middleware   # Middleware (e.g., logging, auth)
+│── /pkg             # Public reusable code (optional)
+│── /api             # API-related docs (e.g., OpenAPI/Swagger)
+│── /scripts         # Scripts for automation
+│── /test            # Test files
+│── main.go          # Application entry point
+│── go.mod           # Go module definition
+│── go.sum           # Dependency checksums
+│── Dockerfile       # Docker setup (optional)
+│── .env             # Environment variables
 ```
