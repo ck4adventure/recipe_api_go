@@ -11,13 +11,25 @@ This golang example will attempt to embody development best practices such as:
 - ensure go 1.24 installed
 - from root dir, `go run main.go`
 
-## Current Routes
+## Stack and Setup
+golang net/http server
+gorillamux for a multiplex router
+good test coverage
+exported server functions for testing
+logging middleware
 
+## Current Routes
 - `/` Home, returns {"message":"hi"}
 - `/health` HealthCheck, returns {"status":"ok"}
 
+## TODO List
+- dockerize
+- add pg db connectors for local or docker
+- make/mage file to enable shorthand commands
+- re-create recipe app be features: ingr, recipe, product
 
-## Eventual Directory Organization
+
+## Directory Organization
 (as suggested by chatgpt)
 
 ```
